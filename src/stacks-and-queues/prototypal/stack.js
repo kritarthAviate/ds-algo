@@ -5,39 +5,35 @@ var Stack = function () {
   var newObj = Object.create(stackMethods);
 
   newObj.storage = {};
+  newObj.top = 0;
 
   return newObj;
 };
 
 var stackMethods = {
   push: function (x) {
-    let length = Object.keys(this.storage).length;
-    this.storage[length] = x;
+    this.storage[this.top] = x;
+    this.top++;
   },
   pop: function () {
-    let length = Object.keys(this.storage).length;
-    if (length > 0) {
-      const result = this.storage[length - 1];
-      delete this.storage[length - 1];
+    if (this.top > 0) {
+      const result = this.storage[this.top - 1];
+      delete this.storage[this.top - 1];
+      this.top--;
       return result;
     }
   },
   size: function () {
-    return Object.keys(this.storage).length;
+    return this.top;
   },
 };
 
 var newStack = Stack(); //create stack instance
 newStack.push(10);
-console.log(newStack.storage);
 newStack.push("dogs");
 console.log(newStack.size()); //2
 newStack.push(20);
-console.log(newStack.storage);
 newStack.pop();
-console.log(newStack.storage);
 newStack.pop();
-console.log(newStack.storage);
 console.log(newStack.pop());
-console.log(newStack.storage);
 console.log(newStack.pop()); // null

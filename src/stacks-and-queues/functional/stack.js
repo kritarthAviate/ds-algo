@@ -3,24 +3,26 @@ var Stack = function () {
 
   // Use an object with numeric keys to store values
   var storage = {};
+  var top = 0;
 
   // Implement the methods below
   someInstance.push = function (value) {
-    storage[Object.keys(storage).length] = value;
+    storage[top] = value;
+    top++;
   };
 
   someInstance.pop = function () {
-    const result = storage[Object.keys(storage).length - 1];
-    delete storage[Object.keys(storage).length - 1];
+    if (top == 0) {
+      return "Empty Stack";
+    }
+    const result = storage[top - 1];
+    delete storage[top - 1];
+    top--;
     return result;
   };
 
   someInstance.size = function () {
-    return Object.keys(storage).length;
-  };
-
-  someInstance.storage = function () {
-    return storage;
+    return top;
   };
 
   return someInstance;
@@ -28,15 +30,10 @@ var Stack = function () {
 
 var newStack = Stack(); //create stack instance
 newStack.push(10);
-console.log(newStack.storage());
 newStack.push("dogs");
 console.log(newStack.size()); //2
 newStack.push(20);
-console.log(newStack.storage());
-newStack.pop();
-console.log(newStack.storage());
-newStack.pop();
-console.log(newStack.storage());
-newStack.pop();
-console.log(newStack.storage());
+console.log(newStack.pop());
+console.log(newStack.pop());
+console.log(newStack.pop());
 console.log(newStack.pop()); // null
