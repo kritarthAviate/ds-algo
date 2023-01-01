@@ -4,35 +4,33 @@ var Queue = function () {
   var newObj = Object.create(queueMethods);
 
   newObj.storage = {};
+  newObj.tail = 0;
+  newObj.head = 0;
 
   return newObj;
 };
 
 var queueMethods = {
   enqueue: function (value) {
-    this.storage[Object.keys(this.storage).length] = value;
+    this.storage[this.tail] = value;
+    this.tail++;
   },
   dequeue: function () {
-    let length = Object.keys(this.storage).length;
-    if (length > 0) {
-      const result = this.storage[0];
-      delete this.storage[0];
+    if (this.tail - this.head > 0) {
+      const result = this.storage[this.head];
+      delete this.storage[this.head];
+      this.head++;
       return result;
     }
   },
   size: function () {
-    return Object.keys(this.storage).length;
+    return this.tail - this.head;
   },
 };
 
 const queue = Queue();
 queue.enqueue(7);
-console.log(queue.storage);
 queue.enqueue(2);
-console.log(queue.storage);
 queue.enqueue(6);
-console.log(queue.storage);
 queue.enqueue(4);
-console.log(queue.storage);
 console.log(queue.dequeue());
-console.log(queue.storage);

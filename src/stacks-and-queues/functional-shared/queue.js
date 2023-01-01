@@ -1,7 +1,11 @@
 var Queue = function () {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
-  let newObj = { storage: {} };
+  let newObj = {};
+
+  newObj.storage = {};
+  newObj.tail = 0;
+  newObj.head = 0;
 
   extend(newObj, queueMethods);
 
@@ -16,18 +20,21 @@ function extend(obj, methods) {
 
 var queueMethods = {
   enqueue: function (value) {
-    let length = Object.keys(this.storage).length;
-    this.storage[length] = value;
+    this.storage[this.tail] = value;
+    this.tail++;
   },
+
   dequeue: function () {
-    if (Object.keys(this.storage).length > 0) {
-      const result = this.storage[0];
-      delete this.storage[0];
+    if (this.tail - this.head > 0) {
+      const result = this.storage[this.head];
+      delete this.storage[this.head];
+      this.head++;
       return result;
     }
   },
+
   size: function () {
-    return Object.keys(this.storage).length;
+    return this.tail - this.head;
   },
 };
 
