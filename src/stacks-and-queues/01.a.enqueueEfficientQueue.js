@@ -20,7 +20,14 @@ function enqueueEfficientQueue() {
   };
 
   obj.peek = function () {
-    return stack1[0];
+    while (stack1.length != 0) {
+      stack2.push(stack1.pop());
+    }
+    const result = stack2[stack2.length - 1];
+    while (stack2.length != 0) {
+      stack1.push(stack2.pop());
+    }
+    return result;
   };
 
   obj.size = function () {
