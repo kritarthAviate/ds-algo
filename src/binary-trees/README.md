@@ -19,27 +19,25 @@ Binary Trees
 9. Given preorder and inorder create the tree.
 
 10. Given postorder and inorder create the tree.
-Bonus :
-Pretty Print a Binary tree. (Hint: Find the height of the tree first)
+    Bonus :
+    Pretty Print a Binary tree. (Hint: Find the height of the tree first)
 
-
- 
-BST and Binary Trees 
+BST and Binary Trees
 
 1. Implement Binary Search tree class. It should have the following functions.
 
 a. insert
-b. remove 
-c. search 
+b. remove
+c. search
 d. size
 e. isEmpty
 
 2. For each node in a binary search tree, create a new duplicate node, and insert the duplice as the left child of the original node.
 
-3. Given a binary tree, check whether there are two nodes in it whose sum equals a given value.  
+3. Given a binary tree, check whether there are two nodes in it whose sum equals a given value.
 
 4. Find LCA(Lowest Common Ancestor) of two elements in a Binary Tree. Read about LCA if you are having doubts about the definition.
- 
+
 5. Find LCA of two elements in a BST.
 
 6. Given a Binary tree find the largest BST subtree.
@@ -48,12 +46,9 @@ e. isEmpty
 
 8. Given a binary tree and a number k, print out all root to leaf paths where the sum of all nodes value is same as the given number.
 
-9. Given a tree and a node of tree, print all nodes which are at distance k from the given node.  
+9. Given a tree and a node of tree, print all nodes which are at distance k from the given node.
 
 10. Given a binary search tree and a int s, find pair of nodes in the BST which sum s.
 
-a. Find a solution for which time complexity is O(n) 
+a. Find a solution for which time complexity is O(n)
 b. Find a solution which uses maximum O(log n) extra space.
-
-
-
