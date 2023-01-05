@@ -13,19 +13,19 @@ Recursion
 6. Use recursion to check if a given String is palindrome or not.
 
 7. Given a string, compute recursively(no loops) a new string where all
-appearances of “pi” have been replaced by “3.14”. 
+   appearances of “pi” have been replaced by “3.14”.
 
 Eg :
-changePi("xpix") → "x3.14x" 
-changePi("pipi") → "3.143.14" 
-changePi("pip")  →  "3.14p"
+changePi("xpix") → "x3.14x"
+changePi("pipi") → "3.143.14"
+changePi("pip") → "3.14p"
 
 8. Given a string, compute recursively a new string where all the 'x'chars have been removed.
 
 Eg :
-a. noX("xaxb")→ "ab" 
+a. noX("xaxb")→ "ab"
 b. noX("abc") → "abc"
-c. noX("xx")  → ""
+c. noX("xx") → ""
 
 9. Write a recursive function to convert a String into the number it represents.
 
@@ -40,9 +40,7 @@ a) pairStar("hello") →"hel#lo"
 b) pairStar("xxyy") → "x#xy#y"
 c) pairStar("aaaa")→"a#a#a#a"
 
-
 12. Find a recursive solution to the towers of hanoi puzzle. You don’t have to write code for this. Read about towers of hanoi on wikipedia.
-
 
 13. Find GCD of two numbers recursively.
 
@@ -56,27 +54,24 @@ c) pairStar("aaaa")→"a#a#a#a"
 
 18. Given a string, return true if it is a nesting of zero or more pairs of parenthesis, like "(())" or "((()))".
 
-nestParen("(a+(b+c))") → true 
-nestParen("((()))")    → true 
-nestParen("(((x))")    → false
+nestParen("(a+(b+c))") → true
+nestParen("((()))") → true
+nestParen("(((x))") → false
 
 19. Given a number find number of numbers greater than the given number with same digits.
 
-- When all digits are distinct. Eg number - 1342 
+- When all digits are distinct. Eg number - 1342
 - Duplicates can be there. Eg number – 15215
-
 
 20. Print numbers from 1 to n in dictionary order. Eg for n = 1000 order will be
 
 1,10,100,1000,101,102...109,11,110,111,112....119,12,120,121 and so on.
 
 21. Return an array of all possible strings of length k that can be formed from a set of n characters.
-Function prototype –returnStrings(String charSet, int k)
+    Function prototype –returnStrings(String charSet, int k)
 
 Eg : Input - returnStrings(“xyz”, 2)
 Output – {“xx”, “xy”, “xz”, “yy”, “yz”, “yx”, “zz”, “zy”, “zx”}
-
-
 
 22. Implement Binary Search.
 
@@ -92,7 +87,7 @@ For e.g. Input : “abc” Output : “”, a, b, c, ab, ac, bc, abc
 
 a. Instead of returning print all these
 
-26. Return all permutations of a given string. 
+26. Return all permutations of a given string.
 
 a. Instead of returning print these.
 For Eg – Input – “abc” , Output – “abc”, “bac”,”bca”,“acb”,”cab”,”cba”
@@ -103,18 +98,17 @@ For e.g. Input : “1123”
 Output : aabc, kbc, alc, aaw, kw
 
 28. Return all subsets of an array
-a. Instead of returning print all these
+    a. Instead of returning print all these
 
-29. Given an array find all subsets of A, which sum to K. 
-a. Instead of returning print all these
+29. Given an array find all subsets of A, which sum to K.
+    a. Instead of returning print all these
 
 30. Suppose you have a string made up of only the letters 'a'and'b'.
 
 Write a recursive function that checks if the string was generated using the following rules -
 
 a. the string begins with an 'a'
-b. each 'a' is followed by nothing or an 'a' or "bb" 
+b. each 'a' is followed by nothing or an 'a' or "bb"
 c. each "bb" is followed by nothing or an 'a'
 
 31. A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time. Implement a method to count how many possible ways the child can run up to the stairs.
-

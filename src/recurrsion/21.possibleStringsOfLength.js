@@ -16,4 +16,4 @@ function possibleStrings(str, prefix, n, k, result) {
   }
 }
 
-console.log(findPossibleStrings("xyz", 1));
+console.log(findPossibleStrings("xyz", 2));

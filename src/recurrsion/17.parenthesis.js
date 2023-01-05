@@ -9,7 +9,7 @@
 //   return str[0] + getParenthesis(str.slice(1), true);
 // }
 
-export function getParenthesis(str) {
+function getParenthesis(str) {
   if (str[0] == "(" && str[str.length - 1] == ")") {
     return str;
   }
@@ -19,4 +19,4 @@ export function getParenthesis(str) {
   return getParenthesis(str.slice(0, str.length - 1));
 }
 
-console.log(getParenthesis("xyz(abc12345"));
+console.log(getParenthesis("xyz(abc)12345"));

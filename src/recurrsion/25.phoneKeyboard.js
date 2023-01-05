@@ -22,4 +22,4 @@ function phoneKeyboard(numStr, result = "") {
   }
 }
 
-phoneKeyboard("34");
+phoneKeyboard("343");
