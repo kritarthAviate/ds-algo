@@ -1,4 +1,4 @@
-# ds-algo
+# Data Structures and Algorithms
 A comprehensive set of problems to get an understanding on DS and Algorithms.
 
 1. [Arrays](https://github.com/kritarthAviate/ds-algo/tree/main/src/arrays)
