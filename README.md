@@ -1,6 +1,6 @@
 # ds-algo
 
-1. Arrays
+1. [Arrays](https://github.com/kritarthAviate/ds-algo/tree/main/src/arrays)
 2. Strings
 3. Recurrsion
 4. Linked List
